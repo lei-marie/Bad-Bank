@@ -2,19 +2,10 @@
   text-align: center;
 }
 
-/* nav{
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  background: rgb(87, 85, 85);
-  color: white;
-}
-
-.nav-links{
-  width: 50%;
+.nav-link {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   list-style: none;
-} */
+  color:aliceblue;
+} 
+
