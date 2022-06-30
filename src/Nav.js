@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { Link } from 'react-router-dom';
 
 function Nav() {
   return (
@@ -12,18 +13,18 @@ function Nav() {
     </button>
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Create Account</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Login</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">AllData</a>
-        </li>
+        <Link to="/">
+        <li  className="nav-link" aria-current="page">Home</li>
+        </Link>
+        <Link to="/createaccount">
+        <li  className="nav-link" aria-current="page">Create Account</li>
+        </Link>
+        <Link to="/login">
+        <li  className="nav-link" aria-current="page">Login</li>
+        </Link>
+        <Link to="/alldata">
+        <li  className="nav-link" aria-current="page">AllData</li>
+        </Link>
       </ul>
     </div>
   </div>
@@ -31,5 +32,5 @@ function Nav() {
 
   );
 }
-
+<a className="nav-link active" aria-current="page" href="#">Home</a>
 export default Nav;
