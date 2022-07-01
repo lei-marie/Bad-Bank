@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -7,5 +13,28 @@
   justify-content: space-around;
   list-style: none;
   color:aliceblue;
+  font-size: larger;
 } 
+
+.navbar-nav {
+  display: flex;
+  width: 30%;
+  margin-left: 38%;
+  width: 35%;
+}
+
+.card-title {
+  font-size: 50px;
+}
+
+.card-text {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.card {
+  background-color: beige;
+  width: 60%;
+  margin-left: 20%;
+}
 
