@@ -1,12 +1,12 @@
 import React from 'react';
 import '../App.css';
 
-function CreateAccount() {
+function CreateAccount(){
   return (
-    <div>
-     <h1>Create Account Page</h1>
-    </div>
-  );
+    <h1>Create Account</h1>
+
+    
+  )
 }
 
 export default CreateAccount;

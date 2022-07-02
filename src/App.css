@@ -6,6 +6,7 @@
 
 .App {
   text-align: center;
+  text-decoration: none;
 }
 
 .nav-link {
@@ -14,6 +15,7 @@
   list-style: none;
   color:aliceblue;
   font-size: larger;
+
 } 
 
 .navbar-nav {
@@ -35,6 +37,16 @@
 .card {
   background-color: beige;
   width: 60%;
-  margin-left: 20%;
+  margin-left: 25%;
+}
+
+.form {
+  width: 50%;
+  padding-top: 1%;
+  margin-left: 33%;
+}
+.mb-3 {
+  width: 50%;
+  margin-left: 10%;
 }
 
