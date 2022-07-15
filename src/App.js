@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Nav from './Nav';
-import Home from './Pages/Home';
-import CreateAccount from './Pages/CreateAccount';
+import Nav from './Components/Nav';
+import Home from './Components/Home';
+import CreateAccount from './Components/CreateAccount';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Login from './Pages/Login';
-import AllData from './Pages/AllData';
+import Login from './Components/Login';
+import AllData from './Components/AllData';
 
 function App() {
   return (
