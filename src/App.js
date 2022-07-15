@@ -4,6 +4,8 @@ import Nav from './Components/Nav';
 import Home from './Components/Home';
 import CreateAccount from './Components/CreateAccount';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Deposit from './Components/Deposit';
+import Withdraw from './Components/Withdraw';
 import Login from './Components/Login';
 import AllData from './Components/AllData';
 
@@ -20,6 +22,12 @@ function App() {
      </Routes>
      <Routes>
      <Route path="/login" element={<Login />}></Route>
+     </Routes>
+     <Routes>
+     <Route path="/deposit" element={<Deposit />}></Route>
+     </Routes>
+     <Routes>
+     <Route path="/withdraw" element={<Withdraw />}></Route>
      </Routes>
      <Routes>
      <Route path="/alldata" element={<AllData />}></Route>
