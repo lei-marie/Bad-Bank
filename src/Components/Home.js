@@ -14,7 +14,7 @@ function Home(){
          <img src="https://cepis.org/app/uploads/2020/01/connected-europe-scaled.jpg" className="card-img2" alt="worldmap" />
          <img src="https://www.wgtn.ac.nz/__data/assets/image/0008/718541/rsz-multi-cultural-face-nz.jpg" className="card-img3" alt="hands" />
          <br/>
-         <a href="/login" className="btn btn-primary" id="button1">Sign up!</a>
+         <a href="/createaccount" className="btn btn-primary" id="button1">Sign up!</a>
         </div>
       </div>
       

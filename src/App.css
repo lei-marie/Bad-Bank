@@ -65,8 +65,11 @@
   position: relative;
   text-align: center;
 }
+.card-img4 {
+  height: 850px
+}
 
-
-
-
-
+.mb-3 {
+  width: 500px;
+  margin-left: 140%;
+}
