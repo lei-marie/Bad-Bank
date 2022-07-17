@@ -3,17 +3,22 @@ import '../../src/App.css';
 
 function Home(){
     return (
-      <div className="card">
-      <div className="card-body">
-        <h5 className="card-title">Bad Bank</h5>
-        <p className="card-text">Welcome!</p>
-        <p className="card-text"><small className="text-muted"></small></p>
+      <>
+      <h1 className="header1"> Welcome to GlobalOne Bank</h1>
+
+      <div className="card bg-dark text-white" id="body1">
+        <img src="https://static.vecteezy.com/system/resources/previews/002/091/582/large_2x/global-network-connection-world-map-point-and-line-composition-concept-of-global-business-illustration-vector.jpg" className="card-img1" alt="worldmap" />
+        <div className="card-img-overlay">
+         <h3 className="card-title">Taking your money further</h3>
+         <p className="card-text">Savings Checking Investing Retirement </p>
+         <img src="https://cepis.org/app/uploads/2020/01/connected-europe-scaled.jpg" className="card-img2" alt="worldmap" />
+         <img src="https://www.wgtn.ac.nz/__data/assets/image/0008/718541/rsz-multi-cultural-face-nz.jpg" className="card-img3" alt="hands" />
+         <br/>
+         <a href="/login" className="btn btn-primary" id="button1">Sign up!</a>
+        </div>
       </div>
-      <img src="https://th.bing.com/th/id/R.e44c1e185cef99ea7869bdc9f3a4bf6a?rik=HSJe4jSV%2fZCklw&pid=ImgRaw&r=0" className="card-img-top" alt="Image Front of bank" />
-      </div>
+      
+      </>
     );  
   }
-
  export default Home;
-
- 

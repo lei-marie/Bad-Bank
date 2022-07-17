@@ -2,11 +2,12 @@ import React from 'react';
 import '../../src/App.css';
 
 function AllData() {
-  return (
-    <div>
-     <h1>All Data Page</h1>
-    </div>
-  );
+
+return (
+    <>
+    <h1>All Data</h1>
+    </>
+);
 }
 
 export default AllData;
