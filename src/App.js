@@ -7,15 +7,22 @@ import Deposit from './Components/Deposit';
 import Withdraw from './Components/Withdraw';
 import Login from './Components/Login';
 import AllData from './Components/AllData';
-import {BrowserRouter, Routes, Route } from 'react-router-dom'
+import {BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
+import {BankProvider} from './Components/context'
 
 function App() {
   return (
+    <>
+    <BankProvider>
+      <div className="App">
+      <Nav />
+      <Outlet />
+      </div>
+    </BankProvider>
+
     <BrowserRouter>
-    <div className="App">
-     <Nav />
      <Routes>
-     <Route path="/home" exact element={<Home />}></Route>
+     <Route path="/" exact element={<Home />}></Route>
      </Routes>
      <Routes>
      <Route path="/createaccount" element={<CreateAccount />}></Route>
@@ -32,9 +39,8 @@ function App() {
      <Routes>
      <Route path="/alldata" element={<AllData />}></Route>
      </Routes>
-     
-    </div>
     </BrowserRouter>
+    </>
   );
 }
 

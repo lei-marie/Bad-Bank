@@ -12,7 +12,7 @@ import '../../src/App.css';
        </button>
      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
      <div className="navbar-nav">
-      <a className="nav-link active" aria-current="page" href="/home">Home</a>
+      <a className="nav-link active" aria-current="page" href="/">Home</a>
       <a className="nav-link active" aria-current="page" href="/createaccount">CreateAccount</a>
       <a className="nav-link active" aria-current="page" href="/login">Login</a>
       <a className="nav-link disabled" href="/deposit" tabIndex="-1" aria-disabled="true">Deposit</a>
