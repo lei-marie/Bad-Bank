@@ -90,8 +90,13 @@
   font-weight: bold;
   font-family: 'Work Sans', sans-serif;
   font-size: 20px;
+  margin-left: 30%;
 }
 
 .card-img5 {
   height: 850px;
+}
+.container2 {
+  margin-right: 75%;
+  margin-top: 5%;
 }

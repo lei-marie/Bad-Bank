@@ -1,35 +1,65 @@
-import React from 'react';
-import '../../src/App.css';
+import React, { useState, useContext} from 'react'
+import { Card, UserContext } from './context'
 
-function CreateAccount() {
+const CreateAccount = () => {
 
-return (
+    const [show, setShow] = useState(true);
+    const [status, setStatus] = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const ctx = useContext(UserContext);
+  
+    function validate(field, label){
+        if (!field) {
+          setStatus('Error: ' + label + 'Input Required');
+          setTimeout(() => setStatus(''),3000);
+          return false;
+        }
+        return true;
+    }
+  
+    function handleCreate(){
+      console.log(name,email,password);
+      if (!validate(name,     'name'))     return;
+      if (!validate(email,    'email'))    return;
+      if (!validate(password, 'password')) return;
+      setShow(false);
+    }    
+  
+    function clearForm(){
+      setName('');
+      setEmail('');
+      setPassword('');
+      setShow(true);
+    }
+  
+    return (
     <div className="container2">
-        <div className="card bg-dark text-white" id="card2">
-            <img src="https://th.bing.com/th/id/R.03b0dc237a10ba037d3673c93ff16dac?rik=StFhKjrfR2%2bHFQ&pid=ImgRaw&r=0" className="card-img4" alt="mountainview lake" id="accountImage"/>
-            <div className="card-img-overlay">
-                <h1 className="card-title">Create An Account</h1>
-                <br/>
-                <br/>
-            <div className="mb-3 row">
-            <div className="mb-3">
-                <label htmlFor="exampleFormControlInput1" className="form-label">Name</label>
-                <input type="name" className="form-control" id="exampleFormControlInput1" placeholder="name" />
-            </div>
-            <div className="mb-3">
-                <label htmlFor="exampleFormControlInput1" className="form-label">Email address</label>
-                <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
-            </div>
-            <div className="mb-3">
-                <label htmlFor="exampleFormControlInput1" className="form-label">Password</label>
-                <input type="password" className="form-control" id="exampleFormControlInput1" placeholder="password" />
-                <button type="submit" className="btn btn-light" id="btn2">Create Account</button>
-            </div>
-            </div> 
-            </div>
-        </div>
-    </div>
-);
-}
+      <Card
+        bgcolor="primary"
+        header="Create Account"
+        status={status}
+        body={show ? (  
+                <>
+                Name<br/>
+                <input type="input" className="form-control" id="name" placeholder="Enter name" value={name} onChange={e => setName(e.currentTarget.value)} /><br/>
+                Email address<br/>
+                <input type="input" className="form-control" id="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.currentTarget.value)}/><br/>
+                Password<br/>
+                <input type="password" className="form-control" id="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.currentTarget.value)}/><br/>
+                <button type="submit" className="btn btn-light" onClick={handleCreate}>Create Account</button>
+                </>
+              ):(
+                <>
+                <h5>Success!</h5>
+                <button type="submit" className="btn btn-light" onClick={clearForm}>Add another account</button>
+                </>
+              )}
+      />
+      </div>
+    )
+  }
 
-export default CreateAccount; 
+  export default CreateAccount;

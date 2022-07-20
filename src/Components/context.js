@@ -1,25 +1,23 @@
-import React, { createContext, useContext, useState } from 'react';
+import  React,{ createContext } from 'react';
 
-const BankContext = createContext();
+export const UserContext = createContext(null);
 
-export const useBankContext = () => useContext(BankContext);
-
-export const BankProvider = ({ children }) => {
-    const [bank, setBank] = useState({
-        loggedInUser: null,
-        users: [{username: 'abel', password: 'abcdef', balance: 10}]
-    })
-const setLoggedInUser = (username) => {
-    setBank({
-        ...bank,
-        loggedInUser: username,
-    });
-}
-
-return (
-    <BankContext.Provider value={{ bank, setLoggedInUser }}>{ children }</BankContext.Provider>
-)
-};
-
+export function Card(props){
+    function classes(){
+      const bg  = props.bgcolor ? ' bg-' + props.bgcolor : ' ';
+      const txt = props.txtcolor ? ' text-' + props.txtcolor: ' text-white';
+      return 'card mb-3 ' + bg + txt;
+    }
   
-
+    return (
+      <div className={classes()} style={{minWidth: "18rem"}}>
+        <div className="card-header">{props.header}</div>
+        <div className="card-body">
+          {props.title && (<h5 className="card-title">{props.title}</h5>)}
+          {props.text && (<p className="card-text">{props.text}</p>)}
+          {props.body}
+          {props.status && (<div id='createStatus'>{props.status}</div>)}
+        </div>
+      </div>      
+    );    
+  }

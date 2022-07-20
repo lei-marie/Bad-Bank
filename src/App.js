@@ -7,39 +7,29 @@ import Deposit from './Components/Deposit';
 import Withdraw from './Components/Withdraw';
 import Login from './Components/Login';
 import AllData from './Components/AllData';
-import {BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
-import {BankProvider} from './Components/context'
+import {BrowserRouter, Routes, Route } from 'react-router-dom'
+import {UserContext} from './Components/context'
 
 function App() {
   return (
     <>
-    <BankProvider>
-      <div className="App">
-      <Nav />
-      <Outlet />
-      </div>
-    </BankProvider>
-
     <BrowserRouter>
-     <Routes>
-     <Route path="/" exact element={<Home />}></Route>
-     </Routes>
-     <Routes>
-     <Route path="/createaccount" element={<CreateAccount />}></Route>
-     </Routes>
-     <Routes>
-     <Route path="/login" element={<Login />}></Route>
-     </Routes>
-     <Routes>
-     <Route path="/deposit" element={<Deposit />}></Route>
-     </Routes>
-     <Routes>
-     <Route path="/withdraw" element={<Withdraw />}></Route>
-     </Routes>
-     <Routes>
-     <Route path="/alldata" element={<AllData />}></Route>
-     </Routes>
+      <UserContext.Provider value={{users:[{name:'abel',email:'abel@mit.edu',password:'secret',balance:100}]}} >
+      <div className="app-container">
+              <Nav />
+              <div className="content-container">
+                  <Routes>
+                      <Route path="/" element={<Home />} />
+                      <Route path="/createaccount" element={<CreateAccount  />} />
+                      <Route path="/deposit" element={<Deposit  />} />
+                      <Route path="/withdraw" element={<Withdraw />} />
+                      <Route path="/alldata" element={<AllData />} />
+                  </Routes>
+              </div>
+          </div >
+      </UserContext.Provider>
     </BrowserRouter>
+    
     </>
   );
 }

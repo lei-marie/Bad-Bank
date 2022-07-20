@@ -1,13 +1,14 @@
-import React from 'react';
-import '../../src/App.css';
+import React, {useContext} from 'react';
+import {UserContext} from './context';
 
-function AllData() {
-
-return (
+ function AllData(){
+  const ctx = useContext(UserContext);
+  return (
     <>
-    <h1>All Data</h1>
+    <h5>All Data in Store</h5>
+    {JSON.stringify(ctx)}<br/>
     </>
-);
+  );
 }
 
 export default AllData;
