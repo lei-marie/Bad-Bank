@@ -1,4 +1,4 @@
-import  React,{ createContext } from 'react';
+import React, {createContext, useState} from 'react';
 
 export const UserContext = createContext(null);
 
@@ -10,7 +10,7 @@ export function Card(props){
     }
   
     return (
-      <div className={classes()} style={{minWidth: "18rem"}}>
+      <div className={classes()} >
         <div className="card-header">{props.header}</div>
         <div className="card-body">
           {props.title && (<h5 className="card-title">{props.title}</h5>)}

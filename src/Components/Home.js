@@ -1,24 +1,24 @@
-import React from 'react';
-import '../../src/App.css';
+import {Link} from 'react-router-dom'
+import '../App.css';
 
 function Home(){
     return (
-      <>
-      <h1 className="header1"> Welcome to GlobalOne Bank</h1>
-
-      <div className="card bg-dark text-white" id="body1">
-        <img src="https://static.vecteezy.com/system/resources/previews/002/091/582/large_2x/global-network-connection-world-map-point-and-line-composition-concept-of-global-business-illustration-vector.jpg" className="card-img1" alt="worldmap" />
-        <div className="card-img-overlay">
-         <h3 className="card-title">Taking your money further</h3>
-         <p className="card-text">Savings Checking Investing Retirement </p>
-         <img src="https://cepis.org/app/uploads/2020/01/connected-europe-scaled.jpg" className="card-img2" alt="worldmap" />
-         <img src="https://www.wgtn.ac.nz/__data/assets/image/0008/718541/rsz-multi-cultural-face-nz.jpg" className="card-img3" alt="hands" />
-         <br/>
-         <a href="/createaccount" className="btn btn-primary" id="button1">Sign up!</a>
+      
+      <div id="homeCard">
+        <div className="card" id="card1" style={{position: 'absolute', textAlign: 'center'}}>
+        <h5 className="card-title"  style={{fontSize: 30 + "px", fontWeight: 'bold', color: "beige"}}>Welcome to Global Bank</h5>
+          <p className="card-text" style={{fontSize: 12 + "px", fontStyle: 'italic', color: "beige" }}>Taking your money further. Instant worldwide connection.</p>
+         
+          <img src="https://www.wgtn.ac.nz/__data/assets/image/0008/718541/rsz-multi-cultural-face-nz.jpg" className="card-img-top" alt="globe" id="homeImg" style={{width: 500 + 'px', position: 'relative',}}/>
+        <div className="card-body" id="homeBody">
+    
+          <Link to="/createaccount"><button type="submit" className="btn btn-primary" id="createAcctBtn" style={{fontSize: 20 + "px", fontWeight: 'bold', backgroundColor: "gold", opacity: .85}}>Sign up today!</button></Link>
+        </div>
         </div>
       </div>
-      
-      </>
+    
+   
     );  
   }
- export default Home;
+
+  export default Home;

@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 .App {
@@ -10,93 +9,137 @@
   text-decoration: none;
 }
 
-.nav-link {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  color:aliceblue;
-  font-size: larger;
-
-} 
-
-.navbar-nav {
-  display: flex;
-  width: 30%;
-  margin-left: 25%;
-  width: 35%;
-  font-family: 'Work Sans', sans-serif;
-  font-size: 20px;
+#homeCard {
+  position:fixed;
+  width: 100%;
+  height: 900px;
+  align-items: center;
+  background-color: rgb(108, 154, 189);
 }
-#goldGlobe {
-  width:75px;
-}
-.header1 {
-  font-size: 75px;
-  font-family: 'Work Sans', sans-serif;
-  margin-left: 25%;
-}
-.card-title {
-  margin-top: 1%;
-  margin-left: 40%;
-}
-.card-text{
-  margin-left: 41.5%;
-}
-.card-img1 {
-  width:650px;
-  height: 700px;
+#homeImg {
+  margin-left: 16%;
+  border-radius: 8px;
+  box-shadow: 8px 8px 10px rgb(40, 68, 97) ;
 }
 
-.card-img2 {
-  width:680px;
-  height: 690px;
-  margin-left: 66%;
-  margin-top: -6%;
+#card1 {
+  margin-left: 30%;
+  margin-top: 5%;
+  padding-top: 2%;
+  border: rgb(184, 189, 88) solid;
+  border-width: 4px;
+  opacity: .9;
+  width:750px;
+  border-radius: 20%;
+  background-image: url(https://th.bing.com/th/id/R.a9b4560339e974252e3a3373c7609ed0?rik=JEAHd9OpP%2bdIPQ&pid=ImgRaw&r=0);
 }
 
-.card-img3 {
-  width:500px;
-  margin-top: -35%;
-  margin-left: 37%;
-}
-
-#button1 {
-  margin-top: -10%;
-  margin-left: 48%;
-}
-
-#body1 {
-  height: 700px;
-}
-.container1 {
+#homeBody {
   position: relative;
   text-align: center;
 }
-.card-img4 {
-  height: 850px
+
+#createActCard {
+  position:fixed;
+  width: 100%;
+  height: 900px;
+  align-items: center;
+  background-image: url(https://wallpapercave.com/wp/wp4223006.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.mb-3 {
-  width: 500px;
-  margin-left: 140%;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: bolder;
-  font-size: 20px;
+#card2 {
+  position:fixed;
+  margin-left: 2%;
+  margin-top: 8%;
+  opacity: .9;
+  width:550px;
+  margin-left: 38%;
 }
 
-#btn2 {
-  margin-top: 3%;
-  background-color: rgb(182, 182, 240);
+.card-header {
+  font-size: larger;
   font-weight: bold;
-  font-family: 'Work Sans', sans-serif;
-  font-size: 20px;
-  margin-left: 30%;
 }
 
-.card-img5 {
-  height: 850px;
+.hovertext {
+  position: relative;
 }
-.container2 {
-  margin-right: 75%;
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  width:8rem;
+  background-color: rgba(228, 96, 100, 0.951);
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  top: 110%;
+  border-radius: 5%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+.nav-link:active {
+  color: rgb(3, 179, 179) !important;
+}
+
+#depositBack {
+  position:fixed;
+  width: 100%;
+  height: 900px;
+  align-items: center;
+  background-image: url(https://th.bing.com/th/id/R.7efae7f6dce13596b70641cc2b274431?rik=plrNKeyDBLtomg&riu=http%3a%2f%2fwww.wallpaperup.com%2fuploads%2fwallpapers%2f2014%2f07%2f10%2f393089%2f7efae7f6dce13596b70641cc2b274431.jpg&ehk=feJ4miDAHkyimErOmnjH%2b69C44ukr9vj%2fCUUB9bQRAs%3d&risl=&pid=ImgRaw&r=0);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.depositCard {
+  position:fixed;
+  margin-left: 2%;
+  margin-top: 2%;
+  opacity: .8;
+  width:550px;
+  margin-left: 2%;
+}
+
+#withdrawBack {
+  position:fixed;
+  width: 100%;
+  height: 900px;
+  align-items: center;
+  background-image: url(https://th.bing.com/th/id/R.8ceae84593e74c458df8752526c4635a?rik=cQ5Se1rk2RYFeA&pid=ImgRaw&r=0);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#withdrawCard {
+  position:fixed;
+  margin-left: 2%;
+  margin-top: 2%;
+  opacity: .8;
+  width:550px;
+  margin-left: 2%;
+}
+
+#dataCard {
+  width: 800px;
+  border-width: 5px;
+  margin-left: 30%;
   margin-top: 5%;
+  opacity: .9;
+}
+
+#dataBack {
+  position:fixed;
+  width: 100%;
+  height: 900px;
+  align-items: center;
+  background-image: url(https://th.bing.com/th/id/R.a9b4560339e974252e3a3373c7609ed0?rik=JEAHd9OpP%2bdIPQ&pid=ImgRaw&r=0);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
